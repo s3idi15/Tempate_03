@@ -121,6 +121,45 @@ ul {
 .header .main-nav > li > a:hover::before {
     left: 0;
 }
+.header .mega-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 30px;
+    background-color: white;
+    border-bottom: 3px solid var(--main-color);
+    z-index: 100;
+    display: flex;
+    gap: 40px;
+    top: calc(100% + 50px);
+    transition: top var(--main-transition-duration), opacity var(--main-transition-duration);
+}
+.header .mega-menu .images {
+    width: 100%;
+}
+.header .mega-menu .links {
+
+}
+.header .mega-menu .links li {
+
+}
+.header .mega-menu .links li::before {
+    content: "";
+}
+.header .mega-menu .links li:hover::before {
+
+}
+.header .mega-menu .links li a {
+    color: var(--main-color);
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.header .mega-menu .links li i {
+    margin-right: 10px;;
+}
 /* End Header */
 /* Start landing */
 .landing {
