@@ -487,7 +487,6 @@ ul {
     left: 15px;
     width: calc(100% - 30px);
     height: 5px;
-    background-color: var(--main-color);
 }
 .features .box p {
     line-height: 1.8;
@@ -499,13 +498,57 @@ ul {
 }
 .features .box a {
     display: block;
-    border: 3px solid red;
+    border: 3px solid transparent;
     width: fit-content;
     margin: 0 auto 30px;
     padding: 10px 30px;
     font-size: 22px;
     font-weight: bold;
-    color: var(--main-color);
+    border-radius: 6px;
+    transition: var(--main-transition-duration);
+}
+.features .quality .img-holder::before {
+    background-color:rgba(244, 64, 54, 0.6);
+}
+.features .quality h2::after {
+    background-color: #f44036;
+}
+.features .quality a {
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right, #f44036 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .time .img-holder::before {
+    background-color:rgba(0, 150, 136, 0.6);
+}
+.features .time h2::after {
+    background-color: #009688;
+}
+.features .time a {
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .passion .img-holder::before {
+    background-color:rgba(3,169, 244, 0.6);
+}
+.features .passion h2::after {
+    background-color: #03a9f4;
+}
+.features .passion a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.features .box:hover a {
+    background-position: left bottom;
+    color: white;
 }
 /* End Features */
 /* Start Animation */
