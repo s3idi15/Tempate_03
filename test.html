@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+        .box {
+            width: fit-content;
+            margin: 10px auto;
+            padding: 10px;
+            position: relative;
+        }
+        .box::after {
+            content: "";
+            width: 80%;
+            height: 100%;
+            background-color: #ddd;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        .box:hover::after {
+            background-color: #999;
+            animation: right-move 0.5s linear forwards;
+        }
+        .img-social {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 10px;
+        }
+        .img-social img {
+            border-radius: 10px;
+            border: 1px solid hsl(0, 0%, 53%);
+        }
+        .img-social .social {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .info {
+            padding-left: 60px;
+        }
+
+        @keyframes right-move {
+    50% {
+        right: 50%;
+    }
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="img-social">
+            <img src="https://placehold.co/200" />
+            <div class="social">
+                <i class="fas fa-server fa-fw"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="info">
+            <h2>Name</h2>
+            <p>Simple short desc</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -596,6 +596,36 @@ ul {
     margin-bottom: 0;
 }
 /* End Testimonials */
+/* Start Team */
+.team {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: white;
+    position: relative;
+}
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.team .box {
+    position: relative;
+}
+.team .box::before {
+    content: "";
+    background-color: #645d5d;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    border-radius: 10px;
+    z-index: -2;
+}
+.team .box .data img {
+    width: 100%;
+}
+/* End Team */
 /* Start Animation */
 @keyframes up-and-down {
     0%, 100% {
